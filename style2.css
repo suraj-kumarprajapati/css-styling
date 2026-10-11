@@ -94,6 +94,22 @@ body {
 .step-header button:first-of-type {
     margin-left: auto;
 }
+
+
+.step-content ol {
+    /* list-style-position: outside;
+    padding-inline-start: 1.5em; */
+    /* margin-inline-start: -1.5em; */
+
+    margin-inline-start: -1.5rem;
+}
+
+.step-content li > p {
+    margin: 0;
+    display: inline;
+}
+
+
 @media (max-width: 600px) {
     .step-header {
         flex-wrap: wrap;
