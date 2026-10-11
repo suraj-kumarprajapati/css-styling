@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive step card</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: system-ui, sans-serif;
+      color: #202124;
+    }
+
+    .steps {
+      width: min(100%, 900px);
+      margin-inline: auto;
+    }
+
+    .step-card {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+    }
+
+    .step-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .step-number { order: 1; white-space: nowrap; }
+
+    .separator {
+      order: 2;
+      width: 1px;
+      height: 24px;
+      background: #bbb;
+    }
+
+    .step-title {
+      order: 3;
+      flex: 0 1 auto;
+      max-width: 64ch;
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .step-header button { order: 4; flex: 0 0 auto; }
+    .step-header button:first-of-type { margin-left: auto; }
+
+    .step-content img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      .step-header { column-gap: 6px; row-gap: 12px; }
+
+      .step-title {
+        order: 5;
+        flex: 0 0 100%;
+        max-width: none;
+      }
+
+      .step-header button {
+        order: 3;
+        padding: 4px 6px;
+        font-size: 0.75rem;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="steps">
+    <article class="step-card">
+      <div class="step-header">
+        <span class="step-number">Step 1</span>
+        <span class="separator" aria-hidden="true"></span>
+        <h2 class="step-title">Choose the option that works best for you</h2>
+        <button type="button">Edit</button>
+        <button type="button">Skip</button>
+        <button type="button">Continue</button>
+      </div>
+
+      <div class="step-content">
+        <img src="https://placehold.co/240x150" alt="Example step illustration">
+        <p>Add your description and other step content here.</p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

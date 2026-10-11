@@ -1,0 +1,120 @@
+
+
+body {
+    padding: 10px;
+}
+
+
+.steps {
+    margin: auto;
+    width: min(95vw, 900px);
+
+
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    max-height: min(90vh, 800px);
+}
+
+/* .step-card {
+  
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    max-height: min(90vh, 800px);
+
+} */
+
+.step-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+
+    /* position: sticky;
+    top: 0;
+    z-index: 1;
+    background: white;
+    */
+}
+
+.step-number {
+    order: 1;
+    white-space: nowrap;
+}
+
+.separator {
+    order: 2;
+    width: 1px;
+    height: 24px;
+    background-color: gray;
+}
+
+
+.step-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y:scroll;
+    background-color: red;
+}
+
+.step-title {
+    order: 3;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex: 0 1 auto;
+    text-align: justify;
+    margin: 0;
+}
+
+.step-header button {
+    order: 4;
+    /* min-width: 24px; */
+    min-height: 24px;
+}
+
+.step-header button:first-of-type {
+    margin-left: auto;
+}
+@media (max-width: 600px) {
+    .step-header {
+        flex-wrap: wrap;
+    }
+    .step-header .step-title {
+        order: 6;
+        flex: 0 0 100%;
+        
+    }
+
+    .separator {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .step-header .step-number {
+        order: 5;
+    }
+}
+
+
+
+
